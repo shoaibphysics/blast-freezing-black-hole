@@ -1,0 +1,37 @@
+Licensing for Blast freezing a black hole
+
+Copyright (c) 2026 Shoaib Akhtar and Xiao-Liang Qi
+
+Different components use different licenses:
+
+1. Paper, scientific supplement, and figure artwork: CC BY 4.0
+   (Creative Commons Attribution 4.0 International).
+
+   This applies to paper/manuscript.tex, paper/manuscript.pdf,
+   paper/supplementary.tex, paper/supplementary.pdf, paper/references.bib,
+   the six supplied figure assets in paper/, and these figure inputs:
+   code/scripts/figures/fig3b.png
+   code/scripts/figures/fig3c_formation_gate_color_map.png
+   code/scripts/figures/fig3d.png
+
+   It also applies to the authors' figure artwork reproduced from those inputs.
+   Full terms: LICENSES/CC-BY-4.0.txt
+   https://creativecommons.org/licenses/by/4.0/
+
+2. Code and skills: MIT.
+
+   This applies to code/ (except the three images explicitly listed above),
+   skills/, and the paper/build.py build script.
+   Full terms: LICENSES/MIT.txt
+
+3. Datasets, environment files, and supporting repository documentation: MIT.
+
+   This includes data/, environment/, supplementary/, README.md, AGENTS.md,
+   CLAUDE.md, paper/README.md, and other original repository support files
+   not explicitly assigned CC BY 4.0 above.
+   Full terms: LICENSES/MIT.txt
+
+Third-party material and dependencies retain their own terms. In particular,
+the separately downloaded Springer Nature LaTeX class and bibliography style
+are not covered by either author license. See supplementary/reuse-status.md.
+The license texts retain their own applicable terms.

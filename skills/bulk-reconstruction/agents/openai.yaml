@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bulk Reconstruction"
+  short_description: "Reconstruct bulk gates and plot general-flavor dynamics"
+  default_prompt: "Use $bulk-reconstruction to validate my two-point function, reconstruct bulk gates, and make the optional plots I request."

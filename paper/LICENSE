@@ -1,0 +1,14 @@
+Paper license: CC BY 4.0
+
+Copyright (c) 2026 Shoaib Akhtar and Xiao-Liang Qi
+
+Blast freezing a black hole: the main manuscript, scientific supplement,
+bibliography, and the six supplied figure assets are licensed under the
+Creative Commons Attribution 4.0 International license.
+
+Full text: ../LICENSES/CC-BY-4.0.txt
+https://creativecommons.org/licenses/by/4.0/
+
+The build.py script and README.md guide use MIT (../LICENSES/MIT.txt).
+Separately downloaded publisher LaTeX support files retain their own terms.
+See ../LICENSE and ../supplementary/reuse-status.md for repository-wide scope.
