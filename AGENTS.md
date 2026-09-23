@@ -8,7 +8,7 @@ authors:
   - name: "Xiao-Liang Qi"
     affiliation: "Leinweber Institute for Theoretical Physics, Stanford University; OpenAI"
 paper_format: "latex"
-version: "1.0.0"
+version: "1.0.1"
 domain: "high-energy-theory"
 tags: ["black-hole-evaporation", "SYK", "bulk-reconstruction", "quantum-information"]
 ---

@@ -3,11 +3,40 @@
 Date: 2026-09-23 UTC. Target protocol: APP 1.0.0.
 
 **Local package validation: passed within the scope and limitations below.**
-This report covers the curated package as an independent repository. The intended
-first version is `1.0.0` (tag `v1.0.0`); version metadata is not evidence of a public
-release. Public tagged-release verification has not been performed. Final author
-approval, an exact release commit/tree, and the tagged-release manifest remain
+This report covers the curated package as an independent repository, with a
+metadata correction prepared for version `1.0.1` (tag `v1.0.1`). The original
+`v1.0.0` snapshot remains unchanged. Final author approval of this correction,
+its exact release commit/tree, and verification of the new public release remain
 separate release steps.
+
+## v1.0.1 publication-ID correction
+
+The APP paper-list verifier rejected the original release because two APP tools
+serialized the same manifest differently: the installed loader recipe included
+a final newline in the bytes being hashed, while the list verifier excluded it.
+The downloaded original manifest, release commit, and tree matched the approved
+release. The failure was reproduced independently; it did not indicate changed
+scientific files.
+
+This correction uses sorted, compact UTF-8 JSON without a trailing newline,
+excluding `app_publication_id` from its own hash input. The private release helper
+is checked against the official list verifier at revision
+`546f35025116a2782fe40dca0582df7cdb26d19e` and independently with
+`jq -S -c -j 'del(.app_publication_id)'`. The final manifest and annotated tag
+must agree on the resulting ID, commit, and tree before publication.
+
+Only the publication version in `AGENTS.md` and this report change within the
+141-file package. The other 139 files are byte-identical to `v1.0.0`, including
+all manuscripts, PDFs, figures, scientific code, data, environment requirements,
+skills, licenses, and the earlier reader-agent test. The reproduction and reader
+checks below are carried forward from that unchanged content; they are not new
+runs for this correction. Package inventory, changed metadata, relative links,
+and the serialization correction were checked locally for this patch.
+
+Older APP loaders following the newline-inclusive recipe may still reject the
+new convention. This upstream inconsistency is documented rather than treated
+as resolved for all readers. Local verifier tests do not constitute acceptance
+by the live APP paper list; that requires a separate post-publication check.
 
 ## Package and scientific ground truth
 
@@ -166,7 +195,8 @@ complete texts. The paper build helper is MIT; the images under code remain CC B
 Publisher support retains its separate LPPL terms. See [reuse-status.md](reuse-status.md).
 
 The selected GitHub repository is https://github.com/shoaibphysics/blast-freezing-black-hole.
-This report verifies local preparation only. A public tagged APP release requires
-author approval of final contents and an exact commit/tree, followed by the release
-and its verifiable `APP_PUBLICATION.json`. No public release or manifest was created
-by this refresh.
+This report verifies local preparation of `v1.0.1`; it does not claim that this
+correction has been published or accepted by the APP paper list. Publication
+requires author approval of the final contents and exact commit/tree, a matching
+annotated tag and release manifest, and independent verification after upload.
+The existing `v1.0.0` release and its recorded ID are preserved as history.
